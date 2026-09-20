@@ -234,17 +234,18 @@
 
   .photo-ring {
     position: relative;
-    width: clamp(420px, 44vw, 560px);
-    height: clamp(420px, 44vw, 560px);
-    border-radius: 50%;
+    width: clamp(300px, 32vw, 400px);
+    height: clamp(420px, 46vw, 560px);
+    border-radius: 24px;
     overflow: hidden;
+    background: var(--surface);
   }
 
   .photo-ring img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center top;
     display: block;
   }
 
@@ -252,20 +253,18 @@
     content: '';
     position: absolute;
     inset: -12px;
-    border-radius: 50%;
+    border-radius: 32px;
     border: 1px solid var(--accent);
     opacity: 0.35;
-    animation: rotateSlow 12s linear infinite;
   }
 
   .photo-ring::after {
     content: '';
     position: absolute;
     inset: -28px;
-    border-radius: 50%;
+    border-radius: 40px;
     border: 1px dashed var(--accent2);
     opacity: 0.2;
-    animation: rotateSlow 20s linear infinite reverse;
   }
 
   .photo-placeholder {
@@ -830,11 +829,7 @@
     .hero-desc { margin: 2rem auto; }
     .hero-cta { justify-content: center; flex-wrap: wrap; }
     .hero-visual { order: -1; }
-    .photo-ring { width: 260px; height: 260px; }
-    .float-tag { font-size: 0.6rem; padding: 0.3rem 0.7rem; }
-    .float-tag-1 { top: -4%; right: 2%; }
-    .float-tag-2 { bottom: 6%; left: 2%; }
-    .float-tag-3 { top: 45%; right: -2%; }
+    .photo-ring { width: 240px; height: 340px; }
     body { overflow-x: hidden; }
     .stats-bar { padding: 1.5rem; gap: 2rem; flex-wrap: wrap; }
     section { padding: 5rem 1.5rem; }
@@ -903,7 +898,7 @@
 
 <!-- Navigation -->
 <nav>
-  <a href="#" class="nav-logo">IS</a>
+  <div></div>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -932,9 +927,6 @@
     <div class="photo-ring">
     <img src="/foto.jpg" alt="Israel Soares">
     </div>
-    <div class="float-tag float-tag-1">Full Stack</div>
-    <div class="float-tag float-tag-2">TypeScript</div>
-    <div class="float-tag float-tag-3">Teresópolis · RJ</div>
   </div>
 </section>
 
